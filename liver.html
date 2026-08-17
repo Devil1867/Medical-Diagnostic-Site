@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prostate Cancer Detection</title>
+  <link rel="stylesheet" href="prostate.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">MediScan</div>
+    <ul class="nav__links">
+      <li class="link"><a href="project.html">Home</a></li>
+      <li class="link"><a href="about.html">About</a></li>
+      <li class="link"><a href="license.html">License</a></li>
+      <li class="link"><a href="prostate.html">Prostate Cancer</a></li>
+      <li class="link"><a href="liver.html">Liver Cancer</a></li>
+      <li class="link"><a href="lung.html">Lung Cancer</a></li>
+    </ul>
+  </nav>
+    <section class="section__container">
+    <div class="bg-shape circle"></div>
+    <div class="bg-shape triangle"></div>
+    <div class="bg-shape hexagon"></div>
+
+  <section class="section__container">
+    <h1 class="section__header">Liver Cancer - Detection Report</h1>
+    <canvas id="lineChart" height="150"></canvas>
+  </section>
+
+  <section class="section__container">
+    <h2 class="section__header">Patient-wise Probability</h2>
+    <div class="chart__wrapper">
+  <div class="chart__left">
+    <input type="number" id="patientInput" min="1" max="20" placeholder="Enter Patient Number (1-20)" />
+    <canvas id="pieChart" width="500" height="500"></canvas>
+  </div>
+  <!-- RIGHT SIDE: heading + image -->
+  <div class="chart__right">
+    <h3 class="yolo__heading">Cancer cell position</h3>
+    <img id="patientImage" src="" alt="Patient analysis" />
+  </div>
+</div>
+<section class="section__container workspace-section">
+  <h2>YOLOv5 Analysis Panels</h2>
+  <div class="workspace-embed">
+    <iframe
+      src="https://wandb.ai/debajitdas097-icfai-university-tripura/YOLOv5/reports/Lung-Cancer--VmlldzoxMzYwMjAxNA"
+      allow="fullscreen"
+    ></iframe>
+  </div>
+</section>
+  <section class="external-analysis">
+  <h2>🔬 External Analysis & Report</h2>
+
+  <div class="report-card">
+    <h3>YOLOv5 Model (Cancer Cell Detection)</h3>
+    <p>
+      Real-time object detection integrated with Weights & Biases for live performance insights.
+    </p>
+    <a href="https://wandb.ai/debajitdas097-icfai-university-tripura/YOLOv5?nw=nwuserdebajitdas097" target="_blank" class="report-btn">🔗 View YOLOv5 Analysis</a>
+  </div>
+
+  <div class="report-card">
+    <h3>Prostate Cancer Detection (CNN + RNN_LSTM)</h3>
+    <p>
+      Deep learning-driven detection and classification using hybrid neural networks.
+    </p>
+    <a href="https://colab.research.google.com/drive/1JcgZyqi5nXJpHtojwtpuMmTupoNwG_s7?usp=sharing" target="_blank" class="report-btn">📄 Open ML Reports</a>
+  </div>
+</section>
+<footer>
+  <div class="footer-column">
+    <h3>MediScan</h3>
+    <p>Empowering early cancer diagnosis through AI innovation.</p>
+  </div>
+  <div class="footer-column">
+    <h3>Links</h3>
+    <ul>
+      <li><a href="project.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="license.html">License</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Direct</h3>
+    <div class="footer-social">
+      <a href="prostate.html"><alt="Prostate" width="20">Prostate</a>
+      <a href="liver.html"><alt="Liver" width="20">Liver</a>
+      <a href="lung.html"><alt="Lungs" width="20">Lungs</a>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  &copy; 2025 MediScan. All rights reserved.
+</div>
+  <script src="js/liver-chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="project.css" />
+    <title>Cancer Diagnosis Center</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">MediScan</div>
+      <ul class="nav__links">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="about.html">About</a></li>
+        <li class="link"><a href="license.html">License</a></li>
+        <li class="link"><a href="login.html">Log Out</a></li>
+      </ul>
+      <button class="btn" onclick="openModal()">Contact Us</button>
+      <!-- Contact Modal -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> support@mediscan.in</p>
+    <p><strong>Phone:</strong> +91 93666 54162</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/mediscan" target="_blank">@mediscan</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/mediscan" target="_blank">linkedin.com/company/mediscan</a></p>
+  </div>
+</div>
+
+<!-- Modal Script -->
+<script>
+  function openModal() {
+    document.getElementById("contactModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("contactModal").style.display = "none";
+  }
+
+  // Optional: Close modal when clicking outside it
+  window.onclick = function(event) {
+    const modal = document.getElementById("contactModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+    </nav>
+
+    <header class="section__container header__container">
+      <h1 class="section__header">Early Detection Saves Lives</h1>
+      <img src="img/IMG_20250713_202659.jpg" alt="Cancer Diagnosis" />
+    </header>
+
+    <section class="section__container plan__container">
+      <p class="subheader">DIAGNOSIS</p>
+      <h2 class="section__header">Choose Your Cancer Type</h2>
+      <div class="plan__grid">
+        <div class="plan__content">
+          <span class="number">01</span>
+          <h4><a href="prostate.html">Prostate Cancer</a></h4>
+          <p>With biopsy images and get rapid malignant/benign classification which helps to detect prostate abnormalities early with higher accuracy.</p>
+          <span class="number">02</span>
+          <h4><a href="liver.html">Liver Cancer</a></h4>
+          <p>Advanced classification for hepatocellular carcinoma using histopathology.</p>
+          <span class="number">03</span>
+          <h4><a href="lung.html">Lung Cancer</a></h4>
+          <p>Automated lung nodule detection using deep learning techniques to accelerate diagnosis.</p>
+        </div>
+        <div class="plan__image">
+          <img src="img/tumour.jpg" alt="Prostate" />
+          <img src="img/lungs.jpg" alt="Liver" />
+          <img src="img/liver.jpg" alt="Lung" />
+        </div>
+      </div>
+    </section>
+
+    <section class="memories">
+      <div class="section__container memories__container">
+        <div class="memories__header">
+          <h2 class="section__header">Hear From Our Specialist Doctors</h2>
+  <button class="btn" onclick="window.location.href='review.html'">See More Reviews</button>
+
+</div>
+        <div class="memories__grid">
+          <div class="memories__card">
+            <span><i class="ri-stethoscope-line"></i></span>
+            <h4>Dr. A. Verma</h4>
+            <p>"Early screening with MediScan tools has improved diagnostic precision across my patients."</p>
+          </div>
+          <div class="memories__card">
+            <span><i class="ri-user-heart-line"></i></span>
+            <h4>Dr. M. Shah</h4>
+            <p>"The image-based detection system is a game-changer for liver and lung cancer care."</p>
+          </div>
+          <div class="memories__card">
+            <span><i class="ri-hospital-line"></i></span>
+            <h4>Dr. R. Nair</h4>
+            <p>"A trustworthy platform for second opinions and data-driven analysis."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <h2 class="section__header">Follow Us For Awareness Campaigns</h2>
+        <form class="subscribe__form" onsubmit="return showThanks()">
+          <input type="email" id="subscribeEmail" placeholder="Enter your email here" required />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>MediScan</h3>
+          <p>Your trusted platform for early cancer diagnosis through AI and digital innovation.</p>
+          <p>We bridge patients and doctors for faster, more accurate testing and consultation.</p>
+        </div>
+        <div class="footer__col">
+          <h4>INFORMATION</h4>
+          <p><a href="project.html">Home</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="license.html">License</a></p>
+        </div>
+        <div class="footer__col">
+          <h4>CONNECT</h4>
+          <p><a href="https://www.facebook.com">Facebook</a></p>
+          <p><a href="https://www.instagram.com">Instagram</a></p>
+          <p><a href="https://twitter.com/">Twitter</a></p>
+        </div>
+      </div>
+      <div class="section__container footer__bar">
+        <p>&copy; 2025 MediScan Diagnostics. All rights reserved.</p>
+        <div class="socials">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+        </div>
+      </div>
+    </footer>
+    <script>
+  function showThanks() {
+    const emailInput = document.getElementById("subscribeEmail");
+    const email = emailInput.value.trim();
+
+    if (email !== "") {
+      alert("Thanks for your valuable support!");
+      emailInput.value = ""; // ✅ Clear the field after success
+    }
+
+    return false; // Prevent form submission
+  }
+</script>
+  </body>
+</html>

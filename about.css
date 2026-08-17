@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #051f6d;      /* Blue */
+  --accent-green: #070e8d;       /* Green */
+  --accent-red: #ff0000;         /* Red */
+  --bg-color: #f3f3f3;
+  --card-bg: #161b22;
+  --text-main: #000000;
+  --text-light: #080808;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+nav {
+  background-color: #102b65;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:#1aff00;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav__links a {
+  color: #1aff00;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav__links a:hover,
+.nav__links .active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.section__container {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.section__subtitle {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.about__section h2 {
+  margin-top: 2rem;
+  color: var(--accent-green);
+  font-size: 1.5rem;
+}
+.about__section p {
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+.about__section ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.about__section li {
+  margin-bottom: 0.5rem;
+}
+.blue {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.green {
+  color: var(--accent-green);
+  font-weight: bold;
+}
+.red {
+  color: var(--accent-red);
+  font-weight: bold;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #101623;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
